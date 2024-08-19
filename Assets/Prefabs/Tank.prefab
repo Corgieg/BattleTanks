@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 2941870150332263037}
   - component: {fileID: 8826163721244522297}
   - component: {fileID: 190567016807753562}
+  - component: {fileID: 7341737505954897493}
   m_Layer: 0
   m_Name: TankTurret
   m_TagString: Untagged
@@ -242,6 +243,22 @@ MonoBehaviour:
   - {fileID: 8049679976364121681}
   projectilePrefab: {fileID: 6650144066364661957, guid: 76b7536149e9aa241af78243ede60888, type: 3}
   reloadDelay: 1
+  shellPoolCount: 2
+--- !u!114 &7341737505954897493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803912980742888887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 903f3a936f6c0974491909c950812e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToPool: {fileID: 0}
+  poolSize: 10
+  spawnedObjectsParent: {fileID: 0}
 --- !u!1 &3541016904358593897
 GameObject:
   m_ObjectHideFlags: 0

@@ -2349,6 +2349,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1158670367}
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DestroyHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DestroyUtil, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -326270114910176295, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      propertyPath: OnDead.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1112875764588201033, guid: 5485e537cf75e6345b92b51956669388, type: 3}
       propertyPath: m_Name
       value: Tank
@@ -2396,8 +2428,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1112875764588201033, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1158670367}
   m_SourcePrefab: {fileID: 100100000, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+--- !u!1 &1158670361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1112875764588201033, guid: 5485e537cf75e6345b92b51956669388, type: 3}
+  m_PrefabInstance: {fileID: 1104022678}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1158670367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158670361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8cc077c5df496d479b68ddfa0342abb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1329266268
 GameObject:
   m_ObjectHideFlags: 0
