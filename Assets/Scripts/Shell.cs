@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Shell : MonoBehaviour
 {
-    public float speed = 10;
-    public int damage = 5;
-    public float maxDistance = 10;
+    public ShellData shellData;
 
     private Vector2 startPosition;
     private float conquaredDistance = 0;
@@ -17,17 +15,18 @@ public class Shell : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Initialize()
+    public void Initialize(ShellData shellData)
     {
+        this.shellData = shellData;
         startPosition = transform.position;
-        rb.velocity = transform.up * speed;
+        rb.velocity = transform.up * shellData.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
         conquaredDistance = Vector2.Distance(transform.position, startPosition);
-        if (conquaredDistance >= maxDistance)
+        if (conquaredDistance >= shellData.maxDistance)
         {
             Debug.Log("Miss...");
             DisableObject();
@@ -46,7 +45,7 @@ public class Shell : MonoBehaviour
 
         var damageable = collision.GetComponent<Damageable>();
         if (damageable != null)
-            damageable.Hit(damage);
+            damageable.Hit(shellData.damage);
         
         DisableObject();
     }

@@ -241,8 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretBarrels:
   - {fileID: 8049679976364121681}
-  projectilePrefab: {fileID: 6650144066364661957, guid: 76b7536149e9aa241af78243ede60888, type: 3}
-  reloadDelay: 1
+  turretData: {fileID: 11400000, guid: a2b38c0b6b1897a409de735d25700723, type: 2}
   shellPoolCount: 2
 --- !u!114 &7341737505954897493
 MonoBehaviour:
@@ -434,11 +433,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  maxSpeedForward: 70
-  maxSpeedReverse: 45
-  accelerationForward: 70
-  accelerationReverse: 45
-  breaks: 90
-  deacceleration: 25
-  rotationSpeed: 140
+  movementData: {fileID: 11400000, guid: f813ba5256538524393d99fc246c1904, type: 2}
   currentSpeed: 0

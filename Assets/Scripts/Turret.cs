@@ -6,8 +6,7 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     public List<Transform> turretBarrels;
-    public GameObject projectilePrefab;
-    public float reloadDelay = 1;
+    public TurretData turretData;
 
     private bool canShoot = true;
     private Collider2D[] tankColliders;
@@ -24,7 +23,7 @@ public class Turret : MonoBehaviour
     }
 
     private void Start() {
-        shellPool.Initialize(projectilePrefab, shellPoolCount); 
+        shellPool.Initialize(turretData.projectilePrefab, shellPoolCount); 
     }
 
     private void Update()
@@ -42,15 +41,14 @@ public class Turret : MonoBehaviour
         if (canShoot)
         {
             canShoot = false;
-            currentDelay = reloadDelay;
+            currentDelay = turretData.reloadDelay;
 
             foreach (var barrel in turretBarrels)
             {
-                //GameObject projectile = Instantiate(projectilePrefab);
                 GameObject projectile = shellPool.CreateObject();
                 projectile.transform.position = barrel.position;
                 projectile.transform.localRotation = barrel.rotation;
-                projectile.GetComponent<Shell>().Initialize();
+                projectile.GetComponent<Shell>().Initialize(turretData.shellData);
                 foreach (var collider in tankColliders)
                 {
                     Physics2D.IgnoreCollision(projectile.GetComponent<Collider2D>(), collider);
