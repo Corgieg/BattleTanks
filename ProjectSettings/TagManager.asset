@@ -11,12 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - Agent
+  - Hittable
+  - ObstaclesMovement
+  - Player
+  - Enemy
   - 
   - 
   - 
