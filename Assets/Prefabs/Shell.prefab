@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4665913383349115892}
   - component: {fileID: 5732064845012950867}
   - component: {fileID: 1277068345115212636}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +161,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f54cdb1d17b1645919f74697c93e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  damage: 5
-  maxDistance: 10
+  shellData: {fileID: 0}

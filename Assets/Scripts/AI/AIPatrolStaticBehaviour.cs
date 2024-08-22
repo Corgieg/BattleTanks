@@ -2,17 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIPatrolStaticBehaviour : MonoBehaviour
+public class AIPatrolStaticBehaviour : AIBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float patrolDelay = 4;
+
+    [SerializeField]
+    private Vector2 randomDirection = Vector2.zero;
+    [SerializeField]
+    private float currentPatrolDelay;
+
+    private void Awake()
     {
-        
+        randomDirection = Random.insideUnitCircle;
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void PerformAction(TankController tank, AIDetector detector)
     {
-        
+        float angle = Vector2.Angle(tank.turretAimer.transform.up, randomDirection);
+
+        if (currentPatrolDelay <= 0 && (angle < 2))
+        {
+            randomDirection = Random.insideUnitCircle;
+            currentPatrolDelay = patrolDelay;
+        }
+        else
+        {
+            if (currentPatrolDelay > 0)
+                currentPatrolDelay -= Time.deltaTime;
+            else
+                tank.HandleMoveTurret((Vector2)tank.turretAimer.transform.position + randomDirection);
+        }
     }
 }
